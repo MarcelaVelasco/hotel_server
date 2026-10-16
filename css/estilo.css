@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #173b57;
+    --azul-oscuro: #102b40;
+    --turquesa: #16a6a1;
+    --fondo: #f3f6fa;
+    --texto: #263746;
+    --gris: #64748b;
+    --blanco: #ffffff;
+    --borde: #dce4ec;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: var(--azul);
+}
+
+h1 {
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Inicio de sesión */
+
+.login-body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #102b40, #187d8b);
+}
+
+.login-container {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 38px;
+    border-radius: 20px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+.login-icon {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-container h1,
+.subtitulo,
+.pie-login {
+    text-align: center;
+}
+
+.subtitulo {
+    color: var(--gris);
+    margin-bottom: 28px;
+}
+
+.pie-login {
+    color: var(--gris);
+    font-size: 12px;
+    margin-top: 24px;
+}
+
+/* Formularios */
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid var(--borde);
+    border-radius: 9px;
+    background: white;
+    color: var(--texto);
+    font: inherit;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #b7e8e5;
+    border-color: var(--turquesa);
+}
+
+.btn-principal,
+.btn-secundario,
+.btn-salir,
+.btn-editar,
+.btn-eliminar {
+    display: inline-block;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.btn-principal {
+    background: var(--turquesa);
+    color: white;
+}
+
+.login-container .btn-principal {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.btn-principal:hover {
+    background: #108580;
+}
+
+.btn-secundario {
+    background: #e8eef4;
+    color: var(--azul);
+}
+
+.btn-salir {
+    background: #fff0f0;
+    color: #a83232;
+}
+
+.btn-editar {
+    background: #e4f3ff;
+    color: #145a85;
+    font-size: 13px;
+}
+
+.btn-eliminar {
+    background: #ffe9e9;
+    color: #a52a2a;
+    font-size: 13px;
+}
+
+/* Barra superior */
+
+.barra-superior {
+    background: var(--azul-oscuro);
+    color: white;
+    min-height: 76px;
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.marca {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.usuario-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Contenido y panel */
+
+.contenedor {
+    max-width: 1400px;
+    width: 92%;
+    margin: 35px auto;
+}
+
+.bienvenida {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--turquesa);
+}
+
+.etiqueta {
+    color: var(--turquesa);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 16px;
+    padding: 26px;
+    box-shadow: 0 5px 20px rgba(25, 55, 80, 0.05);
+}
+
+.tarjeta-icono {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: var(--gris);
+    margin-bottom: 18px;
+}
+
+.tarjeta .btn-principal {
+    margin-top: 5px;
+}
+
+/* Página de hoteles */
+
+.encabezado-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.panel-formulario,
+.tabla-contenedor {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 28px;
+    box-shadow: 0 5px 20px rgba(25, 55, 80, 0.04);
+}
+
+.formulario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 20px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+    margin-top: 15px;
+}
+
+.botones-formulario {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tabla-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.contador {
+    background: #e1f5f3;
+    color: #137772;
+    border-radius: 20px;
+    padding: 7px 12px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+th {
+    background: #edf3f8;
+    color: var(--azul);
+    font-size: 13px;
+    text-align: left;
+}
+
+th, td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e7edf3;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f8fbfd;
+}
+
+.estado {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #e1f5e8;
+    color: #237444;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.acciones {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.form-eliminar {
+    display: inline-block;
+}
+
+.alerta {
+    padding: 14px 16px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+}
+
+.alerta.error {
+    background: #ffebeb;
+    color: #a32929;
+}
+
+.alerta.exito {
+    background: #e2f7e8;
+    color: #236b3c;
+}
+
+.contenedor-edicion {
+    max-width: 850px;
+}
+
+/* Adaptación respons */
+
+@media (max-width: 650px) {
+    .barra-superior {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .usuario-menu {
+        align-items: flex-start;
+    }
+
+    .encabezado-pagina {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .formulario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    .login-container {
+        padding: 25px;
+    }
+
+    .panel-formulario,
+    .tabla-contenedor {
+        padding: 17px;
+    }
+}
