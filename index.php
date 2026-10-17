@@ -18,9 +18,11 @@
     <link rel="stylesheet" href="css/estilo.css">
 </head>    
 <body class ="login-body">
+
     <div class="login-container">
     <div class="Login-icon"></div>
-        <h1>Hotel Sensuyork</h1>
+
+        <h1>Hotel SensuYork</h1>
         <p class="subtitulo">Sistema de Gestión de Hoteles</p>
         
 </body>
