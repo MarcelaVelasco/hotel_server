@@ -21,7 +21,7 @@
 <body class ="login-body">
 
     <div class="login-container">
-    <div class="Login-icon"> <i class="fa-solid fa-hotel"></i></div>
+    <div class="login-icon"> <i class="fa-solid fa-hotel"></i></div>
 
         <h1>Hotel SensuYork</h1>
         <p class="subtitulo">Sistema de Gestión de Hoteles</p>
