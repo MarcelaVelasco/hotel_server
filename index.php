@@ -29,17 +29,17 @@
         <!-- Código para validaciones en el formualrio de inicio de sesión -->
 
         <?php if($error ==='Credenciales incorrectas'): ?>
-        <div class = "Alerta error" >
+        <div class = "alerta error" >
             Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.
         </div>
 
         <?php elseif($error === 'sesión'): ?>
-        <div class = "Alerta error" >
+        <div class = "alerta error" >
             Debe iniciar sesión para acceder a esta página.
         </div>
 
         <?php elseif($error === 'rol'): ?>
-        <div class = "Alerta error" >
+        <div class = "alerta error" >
             No tiene permisos para acceder a esta página.
         </div>
         <?php endif; ?>
