@@ -21,14 +21,39 @@ if($_SERVER["REQUEST_METHOD"] !== "POST"){
     exit;
 }
 
-//recibir los datos del formulario
-
+//recibir los datos del formulario punto trigger
 $nombre = trim($_POST["nombre"] ?? "");
-$ciudad = trim($_POST["ciudad"] ?? "");
-$direccion = trim($_POST["direccion"] ?? "");
-$habitaciones = filter_var($_POST["habitaciones"] ?? null,FILTER_VALIDATE_INT);
+$ciudad = trim($_POST["ciudad"] ??"");
+$direccion = trim($_POST["direccion"] ??"");
+
+$habitaciones = trim($_POST["habitaciones"] ??"");
+
+if ($habitaciones === ""){
+    $habitaciones = null;
+} else{
+    $habitaciones = filter_var($habitaciones,FILTER_VALIDATE_INT);
+}
+
 $precio = trim($_POST["precio"] ?? "");
 $estado = trim($_POST["estado"] ?? "");
+
+//Validaciones php
+//permitimos temporalmente habitaciones negativas para
+//comprobar el trigger de SQL Server las rechace.       PUNTO TRIGGER
+if(
+    $nombre === "" ||
+    $ciudad === ""||
+    $direccion === "" ||
+    $habitaciones === false ||
+    !is_numeric($precio) ||
+    (float)$precio <= 0 ||  
+    !in_array($estado, ["Activo","Inactivo"], true) 
+){
+    die(
+        "Verifica los datos: completa los campos obligatorios" .
+        "y asegúrate de que el precio sea válido."
+    );
+}
 
 
 //ejecutar el procedimiento almacenado de guardar y ejecutar trigger

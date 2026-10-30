@@ -86,7 +86,7 @@ catch(PDOException $e) {
             <div>
                 <label for="habitaciones">Número de habitaciones</label>
                 <input type="number" id="habitaciones" name="habitaciones"
-                       maxlength="100" required> 
+                       min="100" novalidate> 
             </div>
 
             <div>

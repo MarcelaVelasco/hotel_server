@@ -21,6 +21,14 @@ formulariosHotel.forEach(function(formulario){
             return;
         }
 
+        //if(
+            //Number(habitaciones.value) <1 ||
+            //!Number.IsInteger(Number(habitaciones.value))
+
+        //)
+        //{
+        //}
+
     if(Number(habitaciones.value) <1 || !Number.isInteger(Number(habitaciones.value))
     ){
         evento.preventDefault();
