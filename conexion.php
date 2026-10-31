@@ -1,6 +1,6 @@
 <?php
 $server     = "DESKTOP-QEPGA86";
-$baseDatos  = "hotelesABD1";
+$baseDatos  = "hotelesABD2";
 $usuarioSQL = "sa";
 $claveSQL   = "12345";
 
